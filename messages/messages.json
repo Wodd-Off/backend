@@ -1,0 +1,5 @@
+{
+    "200": "Requête effectué avec succès.",
+    "201": "Création de ressource effectué",
+    "400": "Erreur lors de l'enregistrement de l'article."
+}
