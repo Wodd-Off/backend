@@ -7,7 +7,7 @@ const app = express();
 const stuffRoutes = require("./routes/stuff");
 const userRoutes = require('./routes/user')
 
-mongoose.connect('mongodb+srv://admin:jmplctd8@stockstuffs.ixqm7pr.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://user:password@server.mongodb.net/?retryWrites=true&w=majority',
   { 
     useNewUrlParser: true,
     useUnifiedTopology: true 
@@ -28,7 +28,7 @@ app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
 
 app.listen(port, () => {
-  console.log(port)
+  console.log("Listening on " + port)
 });
 
 module.exports = app;
