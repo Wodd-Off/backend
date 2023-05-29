@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const thingSchema = mongoose.Schema({
     title: { 
@@ -20,7 +20,7 @@ const thingSchema = mongoose.Schema({
     price: {
         type: Number,
         required: true
-    }
+    },
 });
 
 module.exports = mongoose.model('Thing', thingSchema);

@@ -1,6 +1,7 @@
-const express = require("express");
-const bodyParser = require("body-parser")
+const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const port = (process.env.PORT || '3000');
 
 const app = express();
 const stuffRoutes = require("./routes/stuff");
@@ -25,5 +26,9 @@ app.use(bodyParser.json());
 
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
+
+app.listen(port, () => {
+  console.log(port)
+});
 
 module.exports = app;
